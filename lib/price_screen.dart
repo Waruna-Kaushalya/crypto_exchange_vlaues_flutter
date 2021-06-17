@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'coin_data.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class PriceScreen extends StatefulWidget {
   @override
   _PriceScreenState createState() => _PriceScreenState();
+}
+
+void envVl() {
+  var abc = dotenv.env['VAR_NAME'];
+  print(abc);
 }
 
 class _PriceScreenState extends State<PriceScreen> {
@@ -21,6 +27,13 @@ class _PriceScreenState extends State<PriceScreen> {
       dropDownItems.add(newItem);
     }
     return dropDownItems;
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    envVl();
   }
 
   @override
