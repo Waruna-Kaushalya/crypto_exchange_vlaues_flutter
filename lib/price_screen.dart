@@ -43,7 +43,6 @@ class _PriceScreenState extends State<PriceScreen> {
       itemExtent: 32.0,
       onSelectedItemChanged: (selectedIndex) {
         print(selectedIndex);
-        print('-------');
       },
       children: pickerItems,
     );
@@ -64,9 +63,6 @@ class _PriceScreenState extends State<PriceScreen> {
             child: Card(
               color: Colors.lightBlueAccent,
               elevation: 5.0,
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
-              // ),
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 28.0),
                 child: Text(
