@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'price_screen.dart';
+import 'pages/price_screen.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 // Future main() async {runApp(MyApp())};
