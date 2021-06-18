@@ -55,7 +55,16 @@ class _PriceScreenState extends State<PriceScreen> {
     return CupertinoPicker(
       itemExtent: 32.0,
       onSelectedItemChanged: (selectedIndex) {
-        print(selectedIndex);
+        // print(selectedIndex);
+
+        setState(() {
+          selectedCurency = currenciesList[selectedIndex];
+
+          // print(value);
+          // jasonData = aacc.fetchApi(selectedCurency);
+          // print(jasonData);
+          getLocationWeather();
+        });
       },
       children: pickerItems,
     );

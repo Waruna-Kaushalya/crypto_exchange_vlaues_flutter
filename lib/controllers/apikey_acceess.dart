@@ -10,7 +10,11 @@ class AccessApiData {
     var url =
         'https://rest.coinapi.io/v1/exchangerate/$baseCoin/$coin?apikey=${av.getApiKey()}';
 
+    print(url);
+
     final response = await http.get(Uri.parse(url));
+    print(response.body);
+    // return jsonDecode(response.body);
 
     if (response.statusCode == 200) {
       return jsonDecode(response.body);
